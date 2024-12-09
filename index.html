@@ -54,10 +54,7 @@ M O N
 <meta property="og:site_name" content="Themesberg" />
 
 <!-- Favicon -->
-
 <link rel="icon" type="image/png" sizes="32x32" src="/assets/img/favicon/favicon-gold-32x32.png/"></link>
-
-
 
 <!-- Fontawesome -->
 <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -66,6 +63,11 @@ M O N
 <link type="text/css" href="./css/neumorphism.css" rel="stylesheet">
 
 <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+<style>
+        .button-container {
+            text-align: center;  /* Centers the button horizontally */
+        }
+    </style>
 </head>
 
 <body>
@@ -73,15 +75,14 @@ M O N
     <header class="header-global">
     <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
+
             <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
                 <img class="navbar-brand-dark" src="./assets/img/brand/jpj-dark.svg" alt="Logo light">
                 <img class="navbar-brand-light" src="./assets/img/brand/jpj-dark.svg" alt="Logo dark">
             </a>
-            <a href="#section1" button class="btn btn-primary text-gray" type="button">JEAN-PHILIPPE JOVANI</a>
-            <a href="#" button class="btn btn-primary text-gray" type="button">@jelp.art</a>
-
-    </nav>
-</header>
+            <a href="#section1" button class="btn btn-primary text-gray" type="button">jelp.art by Jean-Philippe JOVANI</a>
+            </nav>
+    </header>
 
 <main>
 
@@ -102,36 +103,29 @@ M O N
   <!--- CARD-BODY --->
   <div class="section bg-primary pt-0 section-lg">
     <div class="container">
-        <!-- Title -->
-
-                                  <!-- End of title-->
 
         <div class="row mb-5">
             <div class="col-12 col-md-6 col-lg-4 mb-5">
             </div>
                                   <!--- card 01 --->
-
             <div class="col-12 col-md-6 col-lg-4 mb-5">
                 <div class="card bg-primary border-light shadow-soft">
+
                     <div class="card-header p-3">
-                        <img src="./assets/img/blog/blog-article-2.jpg" class="card-img-top rounded" alt="Designer desk">
+                        <a class="card-img-top rounded" href="html/pages/pricing.html"><img src="./assets/img/blog/blog-article-2.jpg" alt="Description"></a>
                     </div>
+
                     <div class="card-body pt-2">
                         <div class="media d-flex align-items-center justify-content-between">
-                            <div class="post-group">
-                                <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="23k followers">
-                                    <img class="avatar-sm mr-2 img-fluid rounded-circle" src="./assets/img/team/profile-picture-2.jpg" alt="Jo portrait"> Jo J. Moore
-                                </a>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <span class="small"><span class="far fa-calendar-alt mr-2"></span>15 March 2020</span>
-                            </div>
                         </div>
-                        <h3 class="h5 card-title mt-4">We partnered up with Google</h3>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-primary btn-sm">Learn More</a>
+                            <h3 class="h5 card-title mt-4" style="text-align: center;">We partnered up with Google</h3>
+                            <p class="card-text" style="text-align: center;">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                            <div class="button-container">
+                            <a href="#section1" button class="btn btn-primary text-gray" type="button">more</a>
+                            </div>
                     </div>
-                  </div>
+                </div>
             </div>
 
                                   <!--- card 02 --->
