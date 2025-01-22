@@ -69,9 +69,8 @@ M O N
 <link type="text/css" href="./css/neumorphism.css" rel="stylesheet">
 
 <!------- TEXT ANIMATION ----->
-<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
-<script src="./src/assets/js/sketch.js"></script>
+<script src="./assets/js/sketch.js"></script>
 
 <script src="./sketch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
@@ -81,6 +80,135 @@ M O N
 
 
 
+
+
+
+<!---------------------- SMOOTH SCROLL ----------------------->
+
+<style>
+/* Existing styles */
+        
+        /* New Smooth Scroll Styles */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .scroll-container {
+            height: 100vh;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .section {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+
+        
+
+        /* Navigation Dots */
+        .section-nav {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+        }
+
+        .section-nav-dot {
+            width: 10px;
+            height: 10px;
+            background-color: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .section-nav-dot.active {
+            background-color: #ffffff;
+        }
+    </style>    
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollContainer = document.querySelector('.scroll-container');
+        const themeToggle = document.getElementById('theme-toggle');
+        const sectionNav = document.querySelector('.section-nav');
+        const sections = document.querySelectorAll('.section');
+        let currentSection = 0;
+        let isScrolling = false;
+
+        // Create Navigation Dots
+        sections.forEach((section, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('section-nav-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => smoothScroll(section));
+            sectionNav.appendChild(dot);
+        });
+
+        // Smooth Scrolling Function
+        function smoothScroll(target) {
+            scrollContainer.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+            updateNavDots(Array.from(sections).indexOf(target));
+        }
+
+        // Update Navigation Dots
+        function updateNavDots(index) {
+            const dots = document.querySelectorAll('.section-nav-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        // Wheel Event Handler
+        function handleWheel(e) {
+            if (isScrolling) return;
+            e.preventDefault();
+            isScrolling = true;
+
+            if (e.deltaY > 0) {
+                currentSection = Math.min(currentSection + 1, sections.length - 1);
+            } else {
+                currentSection = Math.max(currentSection - 1, 0);
+            }
+
+            smoothScroll(sections[currentSection]);
+
+            setTimeout(() => { isScrolling = false; }, 1000);
+        }
+
+        // Theme Toggle Logic
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+            
+            themeToggle.src = document.body.classList.contains('dark-theme')
+                ? "./vendor/@fortawesome/fontawesome-free/svgs/solid/sun.svg"
+                : "./vendor/@fortawesome/fontawesome-free/svgs/solid/adjust.svg";
+        });
+
+        // Event Listeners
+        scrollContainer.addEventListener('wheel', handleWheel, { passive: false });
+    });
+</script>
+<!---------------------- End of Smooth Scroll ----------------------->
 
 
 
@@ -124,6 +252,15 @@ M O N
 
 
 
+<!---------- ALERT ---------->
+<div class="col-12">
+    <div class="alert alert-secondary shadow-inset text-center mb-1" role="alert">
+          <a href="#" class="alert-link"></a>
+          <h5 class="card-title">MIXED MEDIAS</h5>
+      </div>
+  </div>
+<!---------  End of Alert  ---------->
+
 </header>
 <!-----------------  End of Header  ------------------>
 
@@ -131,6 +268,15 @@ M O N
 
 
 <!----------------- HERO Section --------------------->
+<!---------------- SMOOTH  SCROLL -------------------->
+
+<!-- Scroll Container -->
+<div class="scroll-container">
+ 
+ <!--- Hero Section --->
+ <section class="1" id="home">
+
+    
 <!--- ACTION CARD --->
 <div class="col-12">
     <div class="card bg-primary shadow-inset border-light px-5 py-3 text-center mb-5">
@@ -160,15 +306,64 @@ M O N
 
 
 <!------- Toggle light/dark theme  Button -------->
-<!-------- le style est dans le style.css et doit etre paste ici. 
-mais sur ce site le monde sombre apres activation du boutton detruit
-le relief du site. Donc pas sur ce theme-->
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #f0f0f0; /* Light background */
+        transition: background-color 0.3s; /* Smooth transition for background */
+    }
+
+    .theme-toggle-container {
+        position: fixed; /* Fix the position */
+        top: 20px; /* Distance from the top */
+        right: 1%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for the width of the element */
+        z-index: 1000; /* Ensure it stays above other elements */
+    }
+
+    .svg {
+        width: 30px; /* Set a size for the icon */
+        height: 30px; /* Set a size for the icon */
+        cursor: pointer; /* Change cursor to pointer on hover */
+    }
+
+    .dark-theme {
+        background-color: #333; /* Dark background */
+        color: #fff; /* Light text */
+    }
+</style>
+
+
+<div class="theme-toggle-container">
+    <img id="theme-toggle" src="./vendor/@fortawesome/fontawesome-free/svgs/solid/adjust.svg" alt="Toggle light/dark theme" class="svg">
+</div>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-theme'); // Toggle the dark theme class
+        // Optionally, change the icon based on the theme
+        if (document.body.classList.contains('dark-theme')) {
+            themeToggle.src = "./vendor/@fortawesome/fontawesome-free/svgs/solid/sun.svg"; // Change to sun icon
+        } else {
+            themeToggle.src = "./vendor/@fortawesome/fontawesome-free/svgs/solid/adjust.svg"; // Change back to adjust icon
+        }
+    });
+</script>
+<!---------------- End of Toggle light/dark theme  Button ------------------->
 
 
 
 
 
 <main>
+
 
 
 
@@ -219,43 +414,24 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
+
  <!-- Blog/Portfolio Section -->
  <section class="2" id="portfolio">
     
 
-<!------------------- VIDEO 01 ---------------------->
-<div class="col-12">
-    <div class="card bg-primary shadow-soft border-light px-1 py-1 text-center mb-5">
-        <div class="card-body text-center text-md-center">
-          <div class="row align-items-center">
-            <div class="col-12">
-                <a href="./gods.html">
-                <video src="./videos/vid_under_construction.mp4" class="card-img-top" muted autoplay loop></video>
-            </a>
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
-  <!--- End of Video 01--->
 
+<!-------  // 01 BLOG CARD 01 /assets/img/blog/ --->
 
-
-
-
-<!------- 01 BLOCK CARD 01 /assets/img/blog/ ---------->
-
-          <!--- ROW CARD 01 --->
+          <!--- 01 CARD blog 01 --->
           <div class="row mb-5">
 
-
-                    <!--- CARD 01 --->
+                    <!--- blog CARD 01 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-header p-3">
 
                               <a href="./gods.html">
-                                <img src="./images/apollon-belvedere_1_mosaic_architecture_2_3_square_Enhanced.png" class="card-img-top rounded" alt="GODS">
+                                <img src="./assets/img/blog/apollon-belvedere-1_mosaic_architecture_2_px550x367.png" class="card-img-top rounded" alt="GODS">
                               </a>
 
                             </div>
@@ -264,14 +440,18 @@ le relief du site. Donc pas sur ce theme-->
                     </div>
 
 
+ 
 
-                    <!--- CARD 02 --->
+
+
+
+                    <!--- blob CARD 02 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-header p-3">
 
                               <a href="./borders.html">
-                                <img src="./images/rough_cadre_relief_4_archi_2_px1080_Enhanced.png" class="card-img-top rounded" alt="Borders">
+                                <img src="./assets/img/blog/rough-cadre-relief-4-archi-2_px550x367.png" class="card-img-top rounded" alt="Borders">
                               </a>
 
                             </div>
@@ -280,13 +460,12 @@ le relief du site. Donc pas sur ce theme-->
                     </div>
 
 
-
-                    <!--- CARD 03 --->
+                    <!--- blog CARD 03 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-header p-3">
                               <a href="./eyes.html">
-                                <img src="./images/eye_7_1080_Enhanced.png" class="card-img-top rounded" alt="Eyes">
+                                <img src="./assets/img/blog/eye-7_px550x367.png" class="card-img-top rounded" alt="Eyes">
                               </a>
                             </div>
                                 <a href="eyes.html" class="btn btn-primary btn-sm">EYES</a>
@@ -294,11 +473,35 @@ le relief du site. Donc pas sur ce theme-->
                     </div>
 
 
-        </div> <!--- End of Row Card 01 --->
+        </div> <!--- End of Row --->
     </section>
 </div>
 
-<!------- end of block card 01 /assets/img/blog/ ---------->
+
+
+
+ <!-- Blog/Portfolio Section -->
+ <section class="3" id="portfolio">
+   
+        <div class="row mb-5">
+            <!-- Existing Blog Cards -->
+        </div>
+    </div>
+
+<!------ 01 VIDEO LARGE01 ------->
+    <div class="row mb-5 align-items-center">
+           
+      <div class="col">
+
+        <div class="card">
+          <video src="https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4" class="card-img-top" muted autoplay loop></video>
+        </div>
+
+      </div>
+    
+  </div>
+<!------- End of Video Large 01-------->
+</section>
 
 
 
@@ -306,18 +509,15 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
+<!-------- // 02 CARD blog 02  /assets/img/blog/ --->
+          <div class="row mb-5">
 
-<!----------------- BLOCK CARD 02  /assets/img/blog/ ------------------->
-          
-            <!--- ROW CARD 01 --->
-            <div class="row mb-5">
-
-              <!--- CARD 04 --->
+              <!--- blog CARD 04 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-header p-3">
                         <a href="./bases.html">
-                        <img src="./images/B_square_1059px_Enhanced.png" class="card-img-top rounded" alt="Bases">
+                        <img src="./assets/img/blog/b-550w_blog_550x367.png" class="card-img-top rounded" alt="Bases">
                         </a>
                       </div>
                           <a href="bases.html" class="btn btn-primary btn-sm">BASES</a>
@@ -325,12 +525,12 @@ le relief du site. Donc pas sur ce theme-->
               </div>
 
 
-              <!--- CARD 05 --->
+              <!--- blob CARD 05 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-header p-3">
                         <a href="./rough.html">
-                        <img src="./images/frise_27_square_1080_Enhanced.png" class="card-img-top rounded" alt="Bases">
+                        <img src="./assets/img/blog/rough-frises_550x367.png" class="card-img-top rounded" alt="Bases">
                         </a>
                       </div>
                           <a href="rough.html" class="btn btn-primary btn-sm">ROUGH</a>
@@ -338,24 +538,37 @@ le relief du site. Donc pas sur ce theme-->
               </div>
 
 
-              <!--- CARD 06 --->
+              <!--- blog CARD 06 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-header p-3">
-                        <a href="./3d.html">
-                          <img src="./images/cadre_gold_noir_1_1_Enhanced.png" class="card-img-top rounded" alt="06">
+                        <a href="./mixed.html">
+                          <img src="./assets/img/blog/cadre-gold-noir-1-1_px367x550.png" class="card-img-top rounded" alt="06">
                         </a>
                       </div>
-                          <a href="3d.html" class="btn btn-primary btn-sm">3D</a>
+                          <a href="mixed.html" class="btn btn-primary btn-sm">MIXED</a>
                       </div>
               </div>
 
 
       </div><!--- End of Row --->
-<!--- End of Block Card 02 --->
+<!--- End of Blog-Card --->
 
 
 
+<!---------- 02 VIDEO LARGE 02 ----------->
+    <div class="row mb-5 align-items-center">
+           
+        <div class="col">
+  
+          <div class="card">
+            <video src="https://codingyaar.com/wp-content/uploads/video-in-bootstrap-card.mp4" class="card-img-top" muted autoplay loop></video>
+          </div>
+  
+        </div>
+      
+    </div>
+  <!--- End of Video Large 02--->
 
 
 
@@ -376,14 +589,14 @@ le relief du site. Donc pas sur ce theme-->
                               <!--- LINK !!! --->
                                 <div id="section1"></div>
                             <!--- end of link !!! --->
-    div class="container">
+    <div class="container">
 
         <div class="row justify-content-between">
             <div class="col-12 col-md-6 col-lg-4 mb-6 mx-auto">
                
                 <div class="card bg-primary shadow-soft border-light text-center">
                     <div class="card-header p-4">
-                        <img src="./images/moi_mosaicist.png" class="card-img-top rounded" alt="">
+                        <img src="./images/moi_mosaicist_5.png" class="card-img-top rounded" alt="">
                     </div>
 
                     <div class="card-body pt-2">
@@ -422,7 +635,7 @@ le relief du site. Donc pas sur ce theme-->
                 
             </div>
         </div>
-    /div>
+    </div>
 <!--- end of Profile Card --->
 
 
@@ -479,7 +692,7 @@ inserer code block th copy of the site!!!
               <div class="col-lg-1 col-md-3">
                 <a href="./index.html"<span class="badge badge-lg badge-dark text-uppercase">HOME</span></a>
                 <a href="./borders.html"<span class="badge badge-lg badge-secondary text-uppercase">BORDERS</span></a>
-                <a href="./3d.html"<span class="badge badge-lg badge-secondary text-uppercase">3D</span></a>
+                <a href="./mixed.html"<span class="badge badge-lg badge-secondary text-uppercase">MIXED</span></a>
                 <a href="./bases.html"<span class="badge badge-lg badge-secondary text-uppercase">BASES</span></a>
                 <a href="./rough.html"<span class="badge badge-lg badge-secondary text-uppercase">ROUGH</span></a>
                 <a href="./gods.html"<span class="badge badge-lg badge-secondary text-uppercase">GODS</span></a>
