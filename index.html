@@ -76,7 +76,15 @@ M O N
 <script src="./sketch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
 
-<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+
+
+<!------------------------------------ START Formbricks Surveys ---------------------------------------->
+<script type="text/javascript">
+    !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://app.formbricks.com/js/formbricks.umd.cjs";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e),setTimeout(function(){window.formbricks.init({environmentId: "cm6abr7w50008lb032osctbp0", apiHost: "https://app.formbricks.com"})},500)}();
+    </script>
+<!-- END Formbricks Surveys -->
+
 
 
 
@@ -373,8 +381,12 @@ le relief du site. Donc pas sur ce theme-->
                 <!--- CARD 09 --->
                 <div class="col-12 col-md-6 col-lg-4 mb-5">
                     <div class="card bg-primary border-light shadow-soft">
-                       
-                            <a href=".html" class="btn btn-primary btn-sm"></a>
+                        <div class="card-header p-3">
+                          <a href="./animations.html">
+                          <img src="./images/.png" class="card-img-top rounded" alt="Paintings">
+                          </a>
+                        </div>
+                            <a href="animations.html" class="btn btn-primary btn-sm">Animations</a>
                         </div>
                 </div>
   
@@ -483,7 +495,14 @@ le relief du site. Donc pas sur ce theme-->
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <p><strong>Minimalism is essential for me. Uniques Creations. </strong> xxxxxxxxxxxxxxx</p>
+                <p><strong> MINIMALIST UNIQUE CREATIONS </strong> </p>
+                <p>JEAN-PHILIPPE<strong> J O V A N I </strong></p>   
+            <hr/>
+                <p>@JELP.Art</p>
+                    
+
+            <hr/>
+
                 <ul class="d-flex list-unstyled mb-5 mb-lg-0">
                     <li class="mr-2">
                         <a href="https://www.instagram.com/jelp.art/" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="instagram social link"
@@ -510,6 +529,10 @@ le relief du site. Donc pas sur ce theme-->
                     <li class="mb-1"><a class="p-2" target="_blank" href="./rough.html">Rough</a></li>
                     <li class="mb-1"><a class="p-2" target="_blank" href="./eyes.html">Eyes</a></li>
                     <li class="mb-1"><a class="p-2" target="_blank" href="./3d.html">3D</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./paintings.html">Paintings</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./animations.html">Animations</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./pencils.html">Pencils</a></li>
+
                 </ul>
                 <a href="https://www.instagram.com/direct/inbox/">
                     <button class="btn btn-primary" type="button">
@@ -523,18 +546,16 @@ le relief du site. Donc pas sur ce theme-->
                 <h5>Docs</h5>
                 <ul class="footer-links list-unstyled mt-2">
 
-                    <li class="mb-1"><a class="p-2" href="https://themesberg.com/docs/pixel-bootstrap/getting-started/overview/" target="_blank">Docs
+                    <li class="mb-1"><a class="p-2" href="" target="_blank">Docs
                         <span class="badge badge-gray text-uppercase ml-2">v1.0</span></a>
                     </li>
                     <li class="mb-1">
-                        <a class="p-2" href="https://themesberg.com/docs/pixel-bootstrap/getting-started/changelog" target="_blank">Changelog</a>
+                        <a class="p-2" href="" target="_blank">X</a>
                     </li>
                     <li class="mb-1">
-                        <a class="p-2" target="_blank" href="https://themesberg.com/licensing">License</a>
+                        <a class="p-2" target="_blank" href="">Y</a>
                     </li>
-                    <li>
-                        <a class="p-2" target="_blank" href="https://github.com/themesberg/pixel-bootstrap-ui-kit/issues">Support</a>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="col-12 col-lg-4 mb-5 mb-lg-0">
@@ -609,6 +630,54 @@ le relief du site. Donc pas sur ce theme-->
         e.preventDefault();
     });
 </script>
+
+
+
+
+<!-----------------  SUBSCRIBE FORM ----------------->
+<script>
+    const form = document.getElementById("subscribe-form");
+    const messageElement = document.getElementById("message");
+  
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      
+      const email = document.getElementById("email").value;
+      
+      // Make sure the email is not empty
+      if (!email) {
+        messageElement.textContent = "art.jovani@gmail.com";
+        messageElement.style.color = "red";
+        return;
+      }
+  
+      // Submit to Formspree (change to your own endpoint)
+      fetch("https://formspree.io/f/yourformid", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+        }),
+      })
+        .then(response => {
+          if (response.ok) {
+            messageElement.textContent = "Thank you for subscribing!";
+            messageElement.style.color = "green";
+            form.reset();
+          } else {
+            messageElement.textContent = "Oops! Something went wrong. Please try again.";
+            messageElement.style.color = "red";
+          }
+        })
+        .catch((error) => {
+          messageElement.textContent = "An error occurred. Please try again.";
+          messageElement.style.color = "red";
+        });
+    });
+  </script>
+  <!-----------------  End of Subscribe Form ----------------->
 
 
 
