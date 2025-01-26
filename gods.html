@@ -1,7 +1,7 @@
 <!--
 M O N
 =========================================================
-* Neumorphism UI - v1.0.0
+* JOVANI JEAN-PHILIPPE @ JELP.ART
 =========================================================
 
 * Product Page: https://themesberg.com/product/ui-kits/neumorphism-ui
@@ -43,7 +43,6 @@ M O N
 <meta name="twitter:description" content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages.">
 <meta name="twitter:creator" content="@themesberg">
 <meta name="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg">
-
 <!-- Open Graph data -->
 <meta property="fb:app_id" content="214738555737136">
 <meta property="og:title" content="Neumorphism UI by Themesberg" />
@@ -52,18 +51,16 @@ M O N
 <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/neumorphism-ui/neumorphism-thumbnail.jpg"/>
 <meta property="og:description" content="Start developing neumorphic web applications and pages using Neumorphism UI. It features over 100 individual components and 5 example pages." />
 <meta property="og:site_name" content="Themesberg" />
-
-<!-- Favicon -->
-<link rel="icon" type="image/png" sizes="32x32" src="./assets/img/favicon/favicon-gold-32x32.png"></link>
-
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
 <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon/favicon-gold-32x32.png">
 <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon/favicon-gold-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon/favicon-gold-32x32.png">
 <link rel="manifest" href="./assets/img/favicon/site.webmanifest">
 <link rel="mask-icon" href="./assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" src="./assets/img/favicon/favicon-gold-32x32.png"></link>
 
 <!-- Fontawesome -->
 <link type="text/css" href="./vendor/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -71,7 +68,16 @@ M O N
 <!-- Pixel CSS -->
 <link type="text/css" href="./css/neumorphism.css" rel="stylesheet">
 
+<!------- TEXT ANIMATION ----->
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+<script src="./assets/js/sketch.js"></script>
+
+<script src="./sketch.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
+
 <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+
+
 
 <!--- MOI Ajout centrage des buttons !! --->
     <style>
@@ -81,42 +87,114 @@ M O N
     </style>
 
 </head>
+<!-------------  End of Head  -------------->
 
 
-<body>
 
+<!---------------  HEADER  ----------------->
+<header>
 
-    <header class="header-global">
+<!-- LOGO & CONTACT Badge -->
+<header class="header-global">
     <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
             <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
                 <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
                 <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
             </a>
+            <a href="#section1" class="badge badge-dark text-uppercase">Contact</a>
         </div>
-    </nav>
-    </header>
+</nav>
+<!-------------  end of Logo ------------->
 
 
+
+
+</header>
+<!-----------------  End of Header  ------------------>
+
+
+
+
+<!----------------- HERO Section --------------------->
+<!--- ACTION CARD --->
+<div class="col-12">
+    <div class="card bg-primary shadow-inset border-light px-5 py-3 text-center mb-5">
+        <hr>
+        <h4 class="mb-3">G O D S</h4>
+    </div>
+        
+</div>
+
+</section>
+
+<!--- End of Action Card --->
+<!-----------  End of Hero Section ------------->
+
+
+
+
+
+<!----------------- BODY ----------------->
+<body>
+
+
+<!----------------- MAIN ----------------->
 <main>
 
 
-        <!--- HERO --->
-                <div class="row pt-6">
-                  <div class="col-lg-8 col-xl-8">
-                      <h4 class="lead px-md-6 mb-5">G O D S</strong></h4>
-                  </div>
-                </div>
+<!-- Back to Top Button -->
+<a href="#top" class="back-to-top back-to-top-light back-to-top-dark">
+    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/caret-square-up.svg" alt="up" class="svg">
+    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/.svg" alt="up" class="svg">
+</a>
+<style>
+    .back-to-top {
+        position: fixed;
+        bottom: 1px;
+        right: 5px;
+        display: none;
+        z-index: 1000;
+    }
+    .back-to-top-light {
+        display: block;
+    }
+    .back-to-top-dark {
+        display: block;
+    }
+    @media (prefers-color-scheme: dark) {
+        .back-to-top-light {
+            display: block;
+        }
+        .back-to-top-dark {
+            display: block;
+        }
+    }
+</style>
+
+<script>
+    // Show the back-to-top button when scrolled down
+    window.addEventListener('scroll', function() {
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (window.scrollY > 300) {
+            backToTopButton.style.display = 'block';
+        } else {
+            backToTopButton.style.display = 'block';
+        }
+    });
+</script>
+<!-----------  End of back to top button --------------->
 
 
 
-          <!----------------- 01 CARD blog 01 ----------------->
+
+<!----------------- 01 CARD blog 01 ----------------->
           <div class="row mb-5">
 
                     <!--- blog CARD 01 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/B_rough_MIX_artemis_square.png" class="card-img-top rounded-top" alt="Artemis">
+                            <img src="./images/B_rough_MIX_artemis_square_Enhanced.png" class="card-img-top rounded-top" alt="Artemis">
                             <div class="card-body">
                                 <h3 class="h5 card-title mt-3">ARTEMIS</h3>
                                 <p class="card-text">Marbles - Gone</p>
@@ -128,7 +206,7 @@ M O N
                     <!--- blob CARD 02 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/apollon-belvedere-1_mosaic_architecture_2_square_signature.png" class="card-img-top rounded-top" alt="Apollon">
+                            <img src="./images/apollon-belvedere_1_mosaic_architecture_2_3_square_Enhanced.png" class="card-img-top rounded-top" alt="Apollon">
                             <div class="card-body">
                                 <h3 class="h5 card-title mt-3">APOLLON</h3>
                                 <p class="card-text">70x40cm Marbles-Epoxy-Fiberglass</p>
@@ -140,7 +218,7 @@ M O N
                     <!--- blog CARD 03 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/c-1-(Console_ jaune-gris)-MIX_Keros-Syros_HEAD_square_signature.png" class="card-img-top rounded-top" alt="Head">
+                            <img src="./images/C1_MIX_Keros_Syros_HEAD_square_Enhanced.png" class="card-img-top rounded-top" alt="Head">
                             <div class="card-body">
                                 <h3 class="h5 card-title mt-3">HEAD</h3>
                                 <p class="card-text">22x33cm Marbles-from Cycladic 2800-2200 BCE</p>
@@ -159,7 +237,7 @@ M O N
               <!--- blog CARD 04 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/dionysos_archi-1.png" class="card-img-top rounded-top" alt="Dionysos">
+                      <img src="./images/dionysos_archi_1_zoom_Enhanced.png" class="card-img-top rounded-top" alt="Dionysos">
                       <div class="card-body">
                           <h3 class="h5 card-title mt-3">DIONYSOS</h3>
                           <p class="card-text">30x44cm Marbles-Epoxy-Fiberglass</p>
@@ -171,7 +249,7 @@ M O N
               <!--- blob CARD 05 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/ariadne-1_archi-1_px438.png" class="card-img-top rounded-top" alt="Ariadne">
+                      <img src="./images/Ariadne-1_archi_1_Enhanced.png" class="card-img-top rounded-top" alt="Ariadne">
                       <div class="card-body">
                           <h3 class="h5 card-title mt-3">ARIADNE</h3>
                           <p class="card-text">28x40cm Marbles-Epoxy-Fiberglass</p>
@@ -183,7 +261,7 @@ M O N
               <!--- blog CARD 06 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/hera-archi-2.png" class="card-img-top rounded-top" alt="Hera">
+                      <img src="./images/hera-archi-2_Enhanced.png" class="card-img-top rounded-top" alt="Hera">
                       <div class="card-body">
                           <h3 class="h5 card-title mt-3">HERA</h3>
                           <p class="card-text">Marbles - Gone</p>
@@ -203,7 +281,7 @@ M O N
     <!--- blog CARD 07 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/aphrodite-6_archi-2.png" class="card-img-top rounded-top" alt="Aphrodite-6">
+            <img src="./images/aphrodite_6_noel_1_Enhanced.png" class="card-img-top rounded-top" alt="Aphrodite-6">
             <div class="card-body">
                 <h3 class="h5 card-title mt-3">APHRODITE 6</h3>
                 <p class="card-text">30x40cm Marbles-Epoxy-Fiberglass</p>
@@ -215,7 +293,7 @@ M O N
     <!--- blog CARD 08 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/athena-grace_archi-9.png" class="card-img-top rounded-top" alt="Athena">
+            <img src="./images/athena_grace_archi-5_Enhanced.png" class="card-img-top rounded-top" alt="Athena">
             <div class="card-body">
                 <h3 class="h5 card-title mt-3">ATHENA</h3>
                 <p class="card-text">40x42cm Marbles-Epoxy-Fiberglass</p>
@@ -227,7 +305,7 @@ M O N
     <!--- blog CARD 09 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/androgyne-2_archi-4.png" class="card-img-top rounded-top" alt="Androgyne">
+            <img src="./images/androgyne_2_archi_4_Enhanced.png" class="card-img-top rounded-top" alt="Androgyne">
             <div class="card-body">
                 <h3 class="h5 card-title mt-3">ANDROGYNE</h3>
                 <p class="card-text">30x40cm Marbles-Epoxy-Fiberglass</p>
@@ -260,7 +338,7 @@ M O N
 <!--- blog CARD 11 --->
 <div class="col-12 col-md-6 col-lg-4 mb-5">
     <div class="card bg-primary border-light shadow-soft">
-        <img src="./images/demeter-1_mosaic_architecture_1_site.png" class="card-img-top rounded-top" alt="Demeter">
+        <img src="./images/demeter-1_mosaic_archi_1_Enhanced.png" class="card-img-top rounded-top" alt="Demeter">
         <div class="card-body">
             <h3 class="h5 card-title mt-3">DEMETER</h3>
             <p class="card-text">45x70cm Marbles-Epoxy-Fiberglass</p>
@@ -286,77 +364,73 @@ M O N
 
 
 
-<!-------  ACTION CARD  --------->
-  <div class="col-12">
-      <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
-          <div class="card-header pb-0">
-              <h2 class="h1 mb-3">Fusions of the Past and Present</h2>
-          </div>
-          <div class="card-body pt-2 px-0 px-lg-7">
-              <p class="mb-5 lead">
-                  Framed as an exploration of a cultural continuum, connecting historical identities to contemporary relevance
-              </p>
-          </div>
-      </div>
-  </div>
-<!-----  End Action Card  ------>
-
-
-
-
-
-<!-------  PROFILE CARD  ------->
-                              <!--- LINK --->
-                                <div id="section1"></div>
-
-    <div class="container">
-
+<!-------------- PROFILE CARD ------------------------------------------------->
+                <!------------- LINK !!! -------------->
+                <div id="section1"></div>
+                <!--- end of link !!! --->
+    
         <div class="row justify-content-between">
             <div class="col-12 col-md-6 col-lg-4 mb-6 mx-auto">
-
-                <!-- Profile Card -->
+               
                 <div class="card bg-primary shadow-soft border-light text-center">
                     <div class="card-header p-4">
-                        <img src="./.png" class="card-img-top rounded" alt="">
+                        <img src="./images/moi_mosaicist.png" class="card-img-top rounded" alt="">
                     </div>
+
                     <div class="card-body pt-2">
-                        <h3 class="h5 mb-2">JEAN-PHILIPPE</h3>
-                        <h3 class="h5 mb-2">J O V A N I</h3>
-                        <h3 class="h5 mb-2">@ jelp.art</h3>
-                        <h3 class="h5 mb-2">workshop</h3>
-                        <span class="h6 font-weight-normal text-gray mb-4">France - Greece</span>
-                        <p class="card-text">art.jovani@gmail.com</p>
+                      
+                      <h3 class="h3 mb-2">W O R K S H O P</h3>
+                <br>
+                      <h5 class="h5 font-weight-normal text-gray mb-4">France - Greece</h5>
+                
+                      <a href="https://www.instagram.com/direct/inbox/"<span class="btn btn-primary ">Contact > @JELP.ART</span></a>
+                <br>
+                <br>
+                     
+                      <h5 class="card-text">art.jovani@gmail.com</h5>
+                                <style>.card-text {color: #6d7a86;} </style>
+                <br>
                         <ul class="d-flex justify-content-center list-unstyled my-3">
                             <li class="mr-2">
-                                <a href="https://www.instagram.com/jelp.art/" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="twitter social link"
+
+                                <a href="https://www.instagram.com/jelp.art/" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="instagram social link"
                                 data-toggle="tooltip" data-placement="top" title="Follow @jelp.art on Instagram">
                                     <span aria-hidden="true" class="fab fa-instagram"></span>
                                 </a>
+                            <!-- Add space between tooltips -->
+                                <span style="margin-right: 16px;"></span> 
+                            <!-- Add space between tooltips -->
+                                <a href="https://www./" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="pinterest social link"
+                                data-toggle="tooltip" data-placement="top" title="Follow @jelp.art on Pinterest">
+                                    <span aria-hidden="true" class="fab fa-pinterest"></span>
+                                </a>
+
                             </li>
-                          </ul>
+                        </ul>
 
                     </div>
                 </div>
-                <!-- End of Profile Card -->
+                
             </div>
         </div>
-    </div><!-- End of Profile Card -->
+<!--- end of Profile Card --->
 
 
 
 
-<!---- SPLINE 3D ANIMATION --->
 
-<<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.54/build/spline-viewer.js"></script>
-<spline-viewer url=".splinecode"></spline-viewer>
-    <ul class="d-flex justify-content-center list-unstyled my-3">
-      <p>desktop: click-move / 2 finguers</p>
-    </ul>
+
 
 </main>
+<!------------  End of Main --------------->
 
 
-<!-----FOOTER------>
+
+
+
+
+
+
 
 <style>
     .button-container {
@@ -364,62 +438,124 @@ M O N
     }
 </style>
 
-    <footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary ">
+
+
+
+<!---------------------------------- FOOTER ---------------------------------------->
+
+<footer class="d-flex pb-5 pt-6 pt-md-7 border-top border-light bg-primary">
     <div class="container">
         <div class="row">
+            <div class="col-lg-4">
+                <p><strong> MINIMALIST UNIQUE CREATIONS </strong> </p>
+                <p>JEAN-PHILIPPE<strong> J O V A N I </strong></p>   
+            <hr/>
+                <p>@JELP.Art</p>
+            <hr/>
+               
+                <ul class="d-flex list-unstyled mb-5 mb-lg-0">
+                    <li class="mr-2">
+                        <a href="https://www.instagram.com/jelp.art/" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="instagram social link"
+                                data-toggle="tooltip" data-placement="top" title="Follow @jelp.art on Instagram">
+                                    <span aria-hidden="true" class="fab fa-instagram"></span>
+                                </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="https://www./" target="_blank" class="btn btn-icon-only btn-pill btn-primary" aria-label="pinterest social link"
+                                data-toggle="tooltip" data-placement="top" title="Follow @jelp.art on Pinterest">
+                                    <span aria-hidden="true" class="fab fa-pinterest"></span>
+                                </a>
+                    </li>
+                                               
+            </div>
 
-          <div class="container position-relative">
+            <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                <h5>MENU</h5>
+                <ul class="footer-links list-unstyled mt-2">
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./index.html">Home</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./borders.html">Borders</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./gods.html">Gods</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./bases.html">Bases</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./rough.html">Rough</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./eyes.html">Eyes</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./3d.html">3D</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./paintings.html">Paintings</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./animations.html">Animations</a></li>
+                    <li class="mb-1"><a class="p-2" target="_blank" href="./pencils.html">Pencils</a></li>
 
-            <ul class="d-flex list-unstyled my-3">
-              <div class="col-lg-1 col-md-3">
-              <a href="./index.html"<span class="badge badge-lg badge-dark text-uppercase">HOME>UP</span></a>
-              <a href="./mirrors.html"<span class="badge badge-lg badge-secondary text-uppercase">MIRRORS</span></a>
-              <a href="./tables.html"<span class="badge badge-lg badge-secondary text-uppercase">TABLES</span></a>
-              <a href="./index.html"<span class="badge badge-lg badge-secondary text-uppercase">DIVERS</span></a>
-              <a href="./gods.html"<span class="badge badge-lg badge-secondary text-uppercase">GODS</span></a>
-              <a href="./index.html"<span class="badge badge-lg badge-secondary text-uppercase">EYES</span></a>
-            </ul>
+                </ul>
+                <a href="https://www.instagram.com/direct/inbox/">
+                    <button class="btn btn-primary" type="button">
+                        <span class="mr-1"><span class="fas fa-feather-alt"></span></span>Contact
+                    </button>
+                </a>
+                </ul>
+            </div>
 
-          </div>
+            <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+                <h5>Docs</h5>
+                <ul class="footer-links list-unstyled mt-2">
+
+                    <li class="mb-1"><a class="p-2" href="" target="_blank">Docs
+                        <span class="badge badge-gray text-uppercase ml-2">v1.0</span></a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="p-2" href="" target="_blank">X</a>
+                    </li>
+                    <li class="mb-1">
+                        <a class="p-2" target="_blank" href="">Y</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+                <h5>Subscribe</h5>
+                <p class="text-gray font-small mt-2">Join our mailing list. We write rarely, but only the best content.</p>
+                <form action="#">
+                    <div class="form-row mb-2">
+                        <div class="col-12">
+                            <label class="h6 font-weight-normal d-none" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control mb-2" placeholder="example@company.com" name="email" aria-label="Subscribe form" id="exampleInputEmail3" required>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block" data-loading-text="Sending">
+                                <span>Subscribe</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <h6 class="text-gray  m-0">UNDER CONSTRUCTION</a></h6>
+
+                <p class="text-gray font-small m-0">We’ll never share your details.</a></p>
+            </div>
         </div>
-
-
+        <hr class="my-5">
         <div class="row">
             <div class="col">
-
-
-              <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
-                  <div class="container position-relative">
-                      <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
-                          <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
-                          <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
-                      </a>
-                  </div>
-              </nav>
-
-
-
-
-
-                <a href="" target="_blank" class="d-flex justify-content-center">
-                    <img src="./assets/img/blog/brand/jpj-mauve.svg" height="100" class="mb-3" alt="">
+                <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
+                    <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
+                    
                 </a>
             <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                <p class="font-weight-normal font-small mb-0">Copyright © JELP.ART
-                    <span class="current-year">2024</span>. All rights reserved.</p>
+                <p class="font-weight-normal font-small mb-0">Copyright © JELP.Art
+                    <span class="current-year">2025</span>. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+<!------------- End of Footer -------------->
 
-    <!-- Core -->
+
+
+
+<!--- Core --->
 <script src="./vendor/jquery/dist/jquery.min.js"></script>
 <script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
 <script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="./vendor/headroom.js/dist/headroom.min.js"></script>
 
-<!-- Vendor JS -->
+<!--- Vendor JS --->
 <script src="./vendor/onscreen/dist/on-screen.umd.min.js"></script>
 <script src="./vendor/nouislider/distribute/nouislider.min.js"></script>
 <script src="./vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
@@ -432,11 +568,25 @@ M O N
 
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
-<!-- Neumorphism JS -->
+
+<!--- Neumorphism JS --->
 <script src="./assets/js/neumorphism.js"></script>
 
 
+<!--- INTERDIT COPY --->
+<script>
+    document.addEventListener('copy', function(e) {
+        e.clipboardData.setData('text/plain', 'Copying is not allowed on this site.');
+        e.preventDefault();
+    });
+</script>
 
+
+
+
+<!-----------  End of Body ------------->
 </body>
 
+
+<!-----------  End of HTML ------------->
 </html>
