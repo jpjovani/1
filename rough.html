@@ -90,15 +90,48 @@ M O N
         }
     </style>
 
-</head>
-<!-------------  End of Head  -------------->
+
+
+<!------------------------- BACK to TOP Button --------------------------->
+<a class="top-link hide" href="" id="js-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+</a>
+
+<style>
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   margin: 0 1em .2em 0;
+   border-radius: 50%;
+   padding: .25em;
+   width: 30px;
+   height: 40px;
+   background-color: #F8F8F8;
+}
+</style>
+<!------------------------- End of BACK to TOP Button --------------------------->
 
 
 
 
 
-<!---------------  HEADER  ----------------->
-<header>
+</head> <!-------------  End of Head  -------------->
+
+
+
+
+
+
+<header> <!---------------  HEADER  ----------------->
+
+
 
 <!-- LOGO & CONTACT Badge -->
     <header class="header-global">
@@ -112,7 +145,6 @@ M O N
         </div>
 </nav>
 <!-------------  end of Logo ------------->
-
 
 
 
@@ -134,13 +166,6 @@ M O N
         
 </div>
 
-</section>
-
-<!--- End of Action Card --->
-<!-----------  End of Hero Section ------------->
-
-
-
 
 
 
@@ -152,101 +177,27 @@ M O N
 
 
 
-<!------- Toggle light/dark theme  Button -------->
-<!-------- le style est dans le style.css et doit etre paste ici. 
-mais sur ce site le monde sombre apres activation du boutton detruit
-le relief du site. Donc pas sur ce theme-->
-
-
-
-
 
 <main>
 
 
 
 
-<!-- Back to Top Button -->
-<a href="#top" class="back-to-top">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/caret-square-up.svg" alt="up" class="svg">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/.svg" alt="up" class="svg">
-</a>
-<style>
-    .back-to-top {
-        position: fixed;
-        bottom: 1px;
-        right: 5px;
-        display: none;
-        z-index: 1000;
-    }
-    .back-to-top-light {
-        display: block;
-    }
-    .back-to-top-dark {
-        display: block;
-    }
-    @media (prefers-color-scheme: dark) {
-        .back-to-top-light {
-            display: block;
-        }
-        .back-to-top-dark {
-            display: block;
-        }
-    }
-</style>
-
-<script>
-    // Show the back-to-top button when scrolled down
-    window.addEventListener('scroll', function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        if (window.scrollY > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'block';
-        }
-    });
-</script>
-<!-----------  End of back to top button --------------->
 
 
 
 
-
-<!--------------------------- GENERAL BLOCKs CARDS  ----------------------------->
-        <div class="row mb-5">
-
-                <!---  CARD 00 --->
-                <div class="col-12 col-md-6 col-lg-4 mb-5">
-
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4 mb-5">
-                    <div class="card bg-primary border-light shadow-soft">
-                        <div class="card-body">
-                          <a href="./#.html">
-                          <img src="./images/rough-frise-c7_acropole-1.png" class="card-img-top rounded" alt="">
-                          </a>
-                            <h3 class="h5 card-title mt-3">C7</h3>
-                            <p class="card-text">Marbles</p>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-          <!----------------- 01 CARD block 01 ----------------->
+<!------------------------------------- 01 CARD block 01 ---------------------------------->
           <div class="row mb-5">
 
                     <!--- CARD 01 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/rough-frise-21.png" class="card-img-top rounded" alt="01">
-                              </a>
-                                <h3 class="h5 card-title mt-3">21</h3>
-                                <p class="card-text">Marbles 30 cm L</p>
+                              
+                              <img src="./images/rough_frise_21_Enhanced.png" class="card-img-top rounded" alt="21">
+                              
+                                <p class="card-text text-center mt-5">21 - Marbles 30x180 cm</p>
                             </div>
                         </div>
                     </div>
@@ -256,32 +207,32 @@ le relief du site. Donc pas sur ce theme-->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/rough-frise-22.png" class="card-img-top rounded" alt="02">
-                              </a>
-                                <h3 class="h5 card-title mt-3">22</h3>
-                                <p class="card-text">Marbles 30 cm L</p>
+
+                              <img src="./images/rough_frise_27_Enhanced.png" class="card-img-top rounded" alt="27">
+                             
+                                <p class="card-text text-center mt-5">27 - Marbles 30x180 cm</p>
                             </div>
                         </div>
                     </div>
-
-
-                    <!---  CARD 03 --->
+                   
+                   
+                    
+                   <!---  CARD 03 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/rough-frise-27.png" class="card-img-top rounded" alt="03">
-                              </a>
-                                <h3 class="h5 card-title mt-3">27</h3>
-                                <p class="card-text">Marbles 30 cm L</p>
+
+                              <img src="./images/rough_frise_22_Enhanced.png" class="card-img-top rounded" alt="22">
+                              
+                                <p class="card-text text-center mt-5">22 - Marbles 30x230 cm</p>
                             </div>
                         </div>
                     </div>
 
-
             </div><!--- End of Row --->
 <!--- End of Block-Card 01--->
+
+
 
 
           <!------------------ 02 CARD BLOCK 02 ------------------->
@@ -291,11 +242,10 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/rough-frise-8.png" class="card-img-top rounded" alt="04">
-                        </a>
-                          <h3 class="h5 card-title mt-3">08</h3>
-                          <p class="card-text">Marbles</p>
+
+                        <img src="./images/rough_frise_8_Enhanced.png" class="card-img-top rounded" alt="08">
+                        
+                          <p class="card-text text-center mt-5">08 - Marbles 30x110 cm</p>
                       </div>
                   </div>
               </div>
@@ -305,11 +255,10 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/rough-frise-10.png" class="card-img-top rounded" alt="05">
-                        </a>
-                          <h3 class="h5 card-title mt-3">10</h3>
-                          <p class="card-text">Marbles</p>
+
+                        <img src="./images/rough_frise_10_Enhanced.png" class="card-img-top rounded" alt="10">
+                        
+                          <p class="card-text text-center mt-5">10- Marbles 30x85 cm</p>
                       </div>
                   </div>
               </div>
@@ -319,11 +268,10 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/rough-frise-16.png" class="card-img-top rounded" alt="06">
-                        </a>
-                          <h3 class="h5 card-title mt-3">16</h3>
-                          <p class="card-text">Marbles</p>
+                        
+                        <img src="./images/rough_frise_16_Enhanced.png" class="card-img-top rounded" alt="16">
+                        
+                          <p class="card-text text-center mt-5">16 - Marbles 30x110 cm</p>
                       </div>
                   </div>
               </div>
@@ -334,6 +282,34 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
+
+
+<!--------------------------- BLOCK CARD 00  ----------------------------->
+        <div class="row mb-5">
+
+                <!---  CARD 00 --->
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4 mb-5">
+                    <div class="card bg-primary border-light shadow-soft">
+                        <div class="card-body">
+
+                          <img src="./images/rough_frise_c7_acropole_1_Enhanced.png" class="card-img-top rounded" alt="C7">
+                                                      
+                            <p class="card-text text-center mt-5">C7 - Marbles 27x62 cm</p>
+                        </div>
+                    </div>
+                </div>
+        </div><!--- End of Row --->
+            <!--- End of Block-Card 00--->
+
+
+
+
+
+
 <!------------------ 03 CARD BLOCK 03 ------------------->
 <div class="row mb-5">
 
@@ -341,11 +317,10 @@ le relief du site. Donc pas sur ce theme-->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
             <div class="card-body">
-              <a href="./#.html">
-              <img src="./images/rough-frise-c3.png" class="card-img-top rounded" alt="07">
-              </a>
-                <h3 class="h5 card-title mt-3">C3</h3>
-                <p class="card-text">Marbles</p>
+              
+              <img src="./images/rough_frise_c3_acropole_1_Enhanced.png" class="card-img-top rounded" alt="C3">
+              
+                <p class="card-text text-center mt-5">C3 - Marbles 20x40 cm</p>
             </div>
         </div>
     </div>
@@ -355,11 +330,10 @@ le relief du site. Donc pas sur ce theme-->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
             <div class="card-body">
-              <a href="./#.html">
-              <img src="./images/rough-frise-c4.png" class="card-img-top rounded" alt="08">
-              </a>
-                <h3 class="h5 card-title mt-3">C4</h3>
-                <p class="card-text">Marbles</p>
+
+              <img src="./images/rough_frise_c4_acropole_1_Enhanced.png" class="card-img-top rounded" alt="C4">
+              
+                <p class="card-text text-center mt-5">C4 - Marbles 20x40 cm</p>
             </div>
         </div>
     </div>
@@ -369,11 +343,10 @@ le relief du site. Donc pas sur ce theme-->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
             <div class="card-body">
-              <a href="./#.html">
-              <img src="./images/rough-frise-c5.png" class="card-img-top rounded" alt="09">
-              </a>
-                <h3 class="h5 card-title mt-3">C5</h3>
-                <p class="card-text">Marbles</p>
+              
+              <img src="./images/rough_frise_c5_acropole_1_Enhanced.png" class="card-img-top rounded" alt="C5">
+              
+                <p class="card-text text-center mt-5">C5 - Marbles 20x40 cm</p>
             </div>
         </div>
     </div>
@@ -389,17 +362,14 @@ le relief du site. Donc pas sur ce theme-->
 
 
 <!-------  ACTION CARD  --------->
-  <div class="col-12">
-      <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
-          <div class="card-header pb-0">
-              <h2 class="h1 mb-3">MINIMALISM</h2>
-          </div>
-          <div class="card-body pt-2 px-0 px-lg-7">
-              <h4 class="mb-5 lead">Destinated to Modern and Classic Architectures</h4>
-              Harmonizing Minimalism Accross Past and Present
-          </div>
-      </div>
-  </div>
+<div class="col-12">
+    <div class="card bg-primary shadow-inset border-light px-5 py-3 text-center mb-5">
+        <hr>
+        <h1 class="h1 mb-3">MINIMALISM</h1>
+         <h3 class="mb-5 lead">MODERN & CLASSIC ARCHITECTURES</h3>
+    </div>
+        
+    </div>
 <!-----  End Action Card  ------>
 
 
