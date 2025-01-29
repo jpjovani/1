@@ -168,47 +168,32 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-<!-- Back to Top Button -->
-<a href="#top" class="back-to-top">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/caret-square-up.svg" alt="up" class="svg">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/.svg" alt="up" class="svg">
-</a>
-<style>
-    .back-to-top {
-        position: fixed;
-        bottom: 1px;
-        right: 5px;
-        display: none;
-        z-index: 1000;
-    }
-    .back-to-top-light {
-        display: block;
-    }
-    .back-to-top-dark {
-        display: block;
-    }
-    @media (prefers-color-scheme: dark) {
-        .back-to-top-light {
-            display: block;
-        }
-        .back-to-top-dark {
-            display: block;
-        }
-    }
-</style>
+<!------------------------- BACK to TOP Button --------------------------->
 
-<script>
-    // Show the back-to-top button when scrolled down
-    window.addEventListener('scroll', function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        if (window.scrollY > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'block';
-        }
-    });
-</script>
-<!-----------  End of back to top button --------------->
+<a class="top-link hide" href="" id="js-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+</a>
+
+<style>
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   margin: 0 1em .2em 0;
+   border-radius: 50%;
+   padding: .25em;
+   width: 30px;
+   height: 40px;
+   background-color: #F8F8F8;
+}
+</style>
+<!------------------------- End of BACK to TOP Button --------------------------->
 
 
 
@@ -224,11 +209,11 @@ le relief du site. Donc pas sur ce theme-->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/b-550w_square.png" class="card-img-top rounded" alt="01">
-                              </a>
-                                <h3 class="h5 card-title mt-3">B-1 ROUGH</h3>
-                                <p class="card-text">100x120cm / Stones</p>
+                             
+                              <img src="./images/B_square_1059px_Enhanced.png" class="card-img-top rounded" alt="B1 Rough">
+                              
+                                <h5 class="card-text text-center mt-5">B1 Rough</h5>
+                                <p class="card-text text-center">100x120cm - Stones</p>
                             </div>
                         </div>
                     </div>
@@ -238,11 +223,10 @@ le relief du site. Donc pas sur ce theme-->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/h-400w.png" class="card-img-top rounded" alt="02">
-                              </a>
-                                <h3 class="h5 card-title mt-3">Solar Eclipse</h3>
-                                <p class="card-text">60cm / Marbles</p>
+                              
+                              <img src="./images/h_Henanced.png" class="card-img-top rounded" alt="Solar Eclipse">
+                                <h5 class="card-text text-center mt-5">Solar Eclipse</h5>
+                                <p class="card-text text-center">60cm - Marbles</p>
                             </div>
                         </div>
                     </div>
@@ -252,11 +236,11 @@ le relief du site. Donc pas sur ce theme-->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
                             <div class="card-body">
-                              <a href="./#.html">
-                              <img src="./images/c-550w.png" class="card-img-top rounded" alt="03">
-                              </a>
-                                <h3 class="h5 card-title mt-3">C1</h3>
-                                <p class="card-text">20x120cm / Marbles</p>
+                              
+                              <img src="./images/c1_550w_Enhanced.png" class="card-img-top rounded" alt="C1">
+                              
+                                <h5 class="card-text text-center mt-5">C1</h5>
+                                <p class="card-text text-center">20x120cm - Marbles</p>
                             </div>
                         </div>
                     </div>
@@ -273,11 +257,11 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/b15-400w.png" class="card-img-top rounded" alt="04">
-                        </a>
-                          <h3 class="h5 card-title mt-3">Village</h3>
-                          <p class="card-text">Marbles / 61x61cm</p>
+                        
+                        <img src="./images/village_Enhanced.png" class="card-img-top rounded" alt="Village">
+                        
+                        <h5 class="card-text text-center mt-5">Village</h5>
+                          <p class="card-text text-center">Marbles - 61x61cm</p>
                       </div>
                   </div>
               </div>
@@ -287,11 +271,11 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/b12-13-carre.png" class="card-img-top rounded" alt="05">
-                        </a>
-                          <h3 class="h5 card-title mt-3">Rock & Sand</h3>
-                          <p class="card-text">(2X)70x70cm / marbles/ stainless steel finishing</p>
+                        
+                        <img src="./images/b12_13_carre_Enhanced.png" class="card-img-top rounded" alt="Rock & Sand">
+                        
+                        <h5 class="card-text text-center mt-5">Rock & Sand</h5>
+                          <p class="card-text text-center">(2X)70x70cm - marbles</p>
                       </div>
                   </div>
               </div>
@@ -301,11 +285,11 @@ le relief du site. Donc pas sur ce theme-->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
                       <div class="card-body">
-                        <a href="./#.html">
-                        <img src="./images/city_aa.png" class="card-img-top rounded" alt="06">
-                        </a>
-                          <h3 class="h5 card-title mt-3">City</h3>
-                          <p class="card-text">57x57cm /Marbles / Epoxy-fiberglass</p>
+                        
+                        <img src="./images/city_1080_Enhanced.png" class="card-img-top rounded" alt="City">
+                        
+                        <h5 class="card-text text-center mt-5">City</h5>
+                          <p class="card-text text-center">57x57cm - Marbles</p>
                       </div>
                   </div>
               </div>
@@ -414,6 +398,42 @@ le relief du site. Donc pas sur ce theme-->
 
 </div><!--- End of Row --->
 <!--- End of Blog-Card 04--->
+
+
+
+
+<!------------------ 04 CARD blog 04 ------------------->
+<div class="row mb-5">
+
+    <!--- blog CARD 10 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+        
+    </div>
+    
+    
+    <!--- blog CARD 14 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card bg-primary border-light shadow-soft">
+            <div class="card-body">
+              <a href="./#.html">
+              <img src="./images/indian_archi.png" class="card-img-top rounded" alt="Indian">
+              </a>
+                <h3 class="h5 card-title mt-3">Indian</h3>
+                <p class="card-text">Matiere, cm</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--- blog CARD 15 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+        
+    </div>
+    
+    
+    </div><!--- End of Row --->
+    <!--- End of Blog-Card 05--->
+
 
 
 
