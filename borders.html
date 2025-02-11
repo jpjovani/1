@@ -170,48 +170,32 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-<!-- Back to Top Button -->
-<a href="#top" class="back-to-top">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/caret-square-up.svg" alt="up" class="svg">
-    <img src="./vendor/@fortawesome/fontawesome-free/svgs/solid/.svg" alt="up" class="svg">
+<!------------------------- BACK to TOP Button --------------------------->
+
+<a class="top-link hide" href="" id="js-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
 </a>
+
 <style>
-    .back-to-top {
-        position: fixed;
-        bottom: 1px;
-        right: 5px;
-        display: none;
-        z-index: 1000;
-    }
-    .back-to-top-light {
-        display: block;
-    }
-    .back-to-top-dark {
-        display: block;
-    }
-    @media (prefers-color-scheme: dark) {
-        .back-to-top-light {
-            display: block;
-        }
-        .back-to-top-dark {
-            display: block;
-        }
-    }
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   margin: 0 1em .2em 0;
+   border-radius: 50%;
+   padding: .25em;
+   width: 30px;
+   height: 40px;
+   background-color: #F8F8F8;
+}
 </style>
-
-<script>
-    // Show the back-to-top button when scrolled down
-    window.addEventListener('scroll', function() {
-        const backToTopButton = document.querySelector('.back-to-top');
-        if (window.scrollY > 300) {
-            backToTopButton.style.display = 'block';
-        } else {
-            backToTopButton.style.display = 'block';
-        }
-    });
-</script>
-<!-----------  End of back to top button --------------->
-
+<!------------------------- End of BACK to TOP Button --------------------------->
 
 
 
@@ -221,29 +205,45 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-          <!----------------- 01 CARD blog 01 ----------------->
+<!--------------------------------- 01 CARD block 01 -------------------------------------------->
           <div class="row mb-5">
 
                     <!--- blog CARD 01 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/cadre_rough-relief_1080.png" class="card-img-top rounded-top" alt="-">
+                            <div class="card-body">
+
+                            <img src="./images/cadre_rough_relief_4_archi_1_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                        
+                            <p class="card-text text-center mt-5">4 - 50x50cm</p>
+
+                            </div>
                         </div>
                     </div>
 
 
                     <!--- blob CARD 02 --->
-                    <div class="col-12 col-md-6 col-lg-4 mb-5">
-                        <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/cadre-01-plage_1.png" class="card-img-top rounded-top" alt="-">
-                        </div>
+                   <div class="col-12 col-md-6 col-lg-4 mb-5">
+                  <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+                      <img src="./images/cadre_rough_relief_1_Mirror_1_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                      
+                      <p class="card-text text-center mt-5">1 - 33x33cm</p>
+
+                      </div>
                     </div>
+              </div>
 
 
                     <!--- blog CARD 03 --->
                     <div class="col-12 col-md-6 col-lg-4 mb-5">
                         <div class="card bg-primary border-light shadow-soft">
-                            <img src="./images/cadre_4_rough-relief_1080.png" class="card-img-top rounded-top" alt="-">
+                            <div class="card-body">
+                            <img src="./images/cadre_rough-relief_archi_2_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                            
+                            <p class="card-text text-center mt-5">1 - 33x33cm</p>
+
+                            </div>
                         </div>
                     </div>
 
@@ -252,29 +252,41 @@ le relief du site. Donc pas sur ce theme-->
 <!--- End of Blog-Card 01--->
 
 
-          <!------------------ 02 CARD blog 02 ------------------->
+<!---------------------------------------- 02 CARD block 02 -------------------------------------------->
           <div class="row mb-5">
 
-              <!--- blog CARD 04 --->
-              <div class="col-12 col-md-6 col-lg-4 mb-5">
-                  <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/rough-cadre-02_archi-03.png" class="card-img-top rounded-top" alt="-">
-                  </div>
-              </div>
+            <!--- blog CARD 04 --->
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+                    <img src="./images/rough_cadre_relief_4_archi_4_px1420_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                    <p class="card-text text-center mt-5">4 - 50x50cm</p>
+                
+                </div>
+                </div>
+            </div>
 
 
               <!--- blob CARD 05 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
-                  <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/rough-cadre-02_archi-bath-01.png" class="card-img-top rounded-top" alt="-">
-                  </div>
-              </div>
-
+                <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+                    <img src="./images/rough_cadre_relief_4_archi_3_px1420_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                    <p class="card-text text-center mt-5">Symbol of stability and determination</p>
+                
+                </div>
+                </div>
+            </div>
+            
 
               <!--- blog CARD 06 --->
               <div class="col-12 col-md-6 col-lg-4 mb-5">
                   <div class="card bg-primary border-light shadow-soft">
-                      <img src="./images/rough-cadre-02_archi-bath-02.png" class="card-img-top rounded-top" alt="-">
+                    <div class="card-body">
+                      <img src="./images/rough_cadre_2_archi_bath_2_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                      <p class="card-text text-center mt-5">2 - 38x38cm</p>
+
+                    </div>  
                   </div>
               </div>
 
@@ -284,13 +296,17 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-<!------------------ 03 CARD blog 03 ------------------->
+<!----------------------------------- 03 CARD block 03 ----------------------------------------->
 <div class="row mb-5">
 
     <!--- blog CARD 07 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/rough-cadre-relief-4-archi-3.png" class="card-img-top rounded-top" alt="-">
+            <div class="card-body">
+            <img src="./images/rough-cadre_2_archi_bath_1_Enhanced.png" class="card-img-top rounded-top" alt="-">
+            
+        
+        </div>
         </div>
     </div>
 
@@ -298,7 +314,13 @@ le relief du site. Donc pas sur ce theme-->
     <!--- blog CARD 08 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/rough-cadre-relief-4-archi-2_px1080.png" class="card-img-top rounded-top" alt="-">
+            <div class="card-body">
+                
+                <img src="./images/rough_cadre_2_triple_profil_Enhanced.png" class="card-img-top rounded-top" alt="-">
+            
+                
+                
+            </div>
         </div>
     </div>
 
@@ -306,13 +328,136 @@ le relief du site. Donc pas sur ce theme-->
     <!--- blog CARD 09 --->
     <div class="col-12 col-md-6 col-lg-4 mb-5">
         <div class="card bg-primary border-light shadow-soft">
-            <img src="./images/rough-cadre-relief-4-archi-5.png" class="card-img-top rounded-top" alt="-">
+            <div class="card-body">
+
+            <img src="./images/rough_cadre_relief_3_archi_2_px1080_Enhanced.png" class="card-img-top rounded-top" alt="-">
+            
+            
+
+            </div>
+        </div>
+    </div>
+
+</div><!--- End of Row --->
+<!--- End of Blog-Card 03--->
+
+
+
+<!------------------------------ 04 CARD block 04 ---------------------------------------->
+          <div class="row mb-5">
+
+            <!--- blog CARD 10 --->
+             <div class="col-12 col-md-6 col-lg-4 mb-5">
+                  <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+                      <img src="./images/rough_cadre_3_profil_left_px1420_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                    
+                      <p class="card-text text-center mt-5">.</p>
+
+                    </div>
+                   </div>
+              </div>
+
+
+            <!--- blob CARD 11 --->
+           <div class="col-12 col-md-6 col-lg-4 mb-5">
+          <div class="card bg-primary border-light shadow-soft">
+            <div class="card-body">
+              <img src="./images/rough_cadre_3_px1420_Enhanced.png" class="card-img-top rounded-top" alt="-">
+              
+              <p class="card-text text-center mt-5">3 - 38x38cm</p>
+
+              </div>
+            </div>
+      </div>
+
+
+            <!--- blog CARD 12 --->
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+        
+                    <img src="./images/rough_cadre_3_profil_right_px1420_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                    
+                    <p class="card-text text-center mt-5">.</p>
+        
+                    </div>
+                </div>
+            </div>
+
+
+
+  </div><!--- End of Row --->
+  <!--- End of Blog-Card 04--->
+
+
+
+
+
+<!----------------------------------- 05 CARD block 05 ----------------------------------------->
+<div class="row mb-5">
+
+    <!--- blog CARD 13 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card bg-primary border-light shadow-soft">
+            <div class="card-body">
+                <img src="./images/rough-cadre-relief-4_px1420_exterior_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                
+            </div>
         </div>
     </div>
 
 
-  </div><!--- End of Row --->
-  <!--- End of Blog-Card 03--->
+    <!--- blog CARD 14 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+                <div class="card bg-primary border-light shadow-soft">
+                    <div class="card-body">
+        
+                    <img src="./images/rough-cadre-relief-4_px1420_beach_2_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                    
+                    
+        
+                    </div>
+                </div>
+            </div>
+
+
+    <!--- blog CARD 15 --->
+    <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div class="card bg-primary border-light shadow-soft">
+            <div class="card-body">
+                <img src="./images/rough-cadre-relief-4_px1420_neige_2_Enhanced.png" class="card-img-top rounded-top" alt="-">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+<!----------------------------------- ALERT --------------------------------------------->
+<div class="card-body text-center text-md-center">
+    <div class="col-12 col-md-20">
+        <div class="alert alert-dark shadow-inset" role="alert">
+            <span class="alert-inner--text"><p>Exterior Resistance / Epoxy-Fiberglass</p></span>
+        </div>
+        
+    </div>
+</div>
+<!--- End of Alert --->
+
+
+
+
+</div><!--- End of Row --->
+<!--- End of Blog-Card 05--->
+
+
+
+
+
+
+
+
 
 
 
@@ -320,11 +465,12 @@ le relief du site. Donc pas sur ce theme-->
   <div class="col-12">
       <div class="card bg-primary shadow-soft border-light px-4 py-5 text-center mb-5">
           <hr>
-              <h1 class="h1 mb-3">3D Light and Shadow Contrasts</h1>
-              <h3 class="mb-5 lead">Minimalism Between Mosaic and Sculpture</h3>
+              <h1 class="h1 mb-3">MOSAIC - SCULPTURE</h1>
+              <h3 class="mb-5 lead">Depth - Dynamism - Texture</h3>
         </div>
     </div>
 <!-----  End Action Card  ------>
+
 
 
 
@@ -384,7 +530,6 @@ le relief du site. Donc pas sur ce theme-->
             </div>
         </div>
 <!--- end of Profile Card --->
-
 
 
 
@@ -466,42 +611,32 @@ le relief du site. Donc pas sur ce theme-->
                 </a>
                 </ul>
             </div>
-            <!--- docs --->
-            <div class="col-6 col-lg-2 mb-5 mb-lg-0">
+             <!--- docs --->
+             <div class="col-6 col-lg-2 mb-5 mb-lg-0">
                 <h5>Docs</h5>
                 <ul class="footer-links list-unstyled mt-2">
 
-                    <li class="mb-1"><a class="p-2" href="" target="_blank">Docs
+                    <li class="mb-1"><a class="p-2"  target="_blank">Docs
                         <span class="badge badge-gray text-uppercase ml-2">v1.0</span></a>
                     </li>
                     <li class="mb-1">
-                        <a class="p-2" href="" target="_blank">-</a>
+                        <a class="p-2"  target="_blank">-</a>
                     </li>                   
-                    
+                    <li class="mb-1">
+                        <a class="p-2"  target="_blank">-</a>
+                    </li>  
+                    <li class="mb-1">
+                        <a class="p-2"  target="_blank">-</a>
+                    </li>  
+
                 </ul>
             </div>
             <!--- end of docs --->
-            <!--- suscribe --->
-            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
-                <h5>Subscribe</h5>
-                <p class="text-gray font-small mt-2">Join our mailing list. We write rarely, but only the best content.</p>
-                <form action="#">
-                    <div class="form-row mb-2">
-                        <div class="col-12">
-                            <label class="h6 font-weight-normal d-none" for="exampleInputEmail3">Email address</label>
-                            <input type="email" class="form-control mb-2" placeholder="example@company.com" name="email" aria-label="Subscribe form" id="exampleInputEmail3" required>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary btn-block" data-loading-text="Sending">
-                                <span>Subscribe</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <h6 class="text-gray  m-0">UNDER CONSTRUCTION</a></h6>
-
-                <p class="text-gray font-small m-0">We’ll never share your details.</a></p>
+             <!--- suscribe --->
+             <div class="col-12 col-lg-4 mb-5 mb-lg-0">
+                
             </div>
+            <!--- end of suscribe --->
             <!--- end of suscribe --->
         </div>
         <!--- end of row --->
@@ -515,9 +650,13 @@ le relief du site. Donc pas sur ce theme-->
                 </a>
                 <!--- end of logo --->
                 <hr class="my-4">
-            <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
-                <p class="font-weight-normal font-small mb-0">Copyright © JELP.Art
-                    <span class="current-year">2025</span>. All rights reserved.</p>
+                <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                    <p class="text-gray font-small m-0">The pics backgrounds are often made using AI</p>
+                </div>
+                <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                    <p class="font-weight-normal font-small mb-0">Copyright © JELP.Art
+                        <span class="current-year">2025</span>. All rights reserved</p>
+                </div>
             </div>
 
         </div>
@@ -530,21 +669,6 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-<!------------------- VIDEO 01 ---------------------->
-<div class="col-12">
-    <div class="card bg-primary shadow-soft border-light px-1 py-1 text-center mb-5">
-        <div class="card-body text-center text-md-center">
-          <div class="row align-items-center">
-            <div class="col-12">
-                <a href="./gods.html">
-                <video src="./videos/vid_under_construction_2.mp4" class="card-img-top" muted autoplay loop></video>
-                </a>
-            </div>
-          </div>
-        </div>
-    </div>
-</div>
-  <!--- End of Video 01--->
 
 
 
