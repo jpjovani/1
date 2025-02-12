@@ -70,7 +70,8 @@ M O N
 
 <!------- TEXT ANIMATION ----->
 <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-<script src="./assets/js/sketch.js"></script>
+
+<script src="./src/assets/js/sketch.js"></script>
 
 <script src="./sketch.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.2/p5.min.js"></script>
@@ -82,41 +83,120 @@ M O N
 <script type="text/javascript">
     !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://app.formbricks.com/js/formbricks.umd.cjs";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e),setTimeout(function(){window.formbricks.init({environmentId: "cm6abr7w50008lb032osctbp0", apiHost: "https://app.formbricks.com"})},500)}();
     </script>
-<!-- END Formbricks Surveys -->
+<!--- end of Formbricks Surveys --->
 
 
 
-
-
-<!--- MOI Ajout centrage des buttons !! --->
+<!---------------------------- MOI Ajout centrage des buttons !! ----------------------->
     <style>
         .button-container {
             text-align: center;  /* Centers the button horizontally */
         }
     </style>
-
-</head>
-<!-------------  End of Head  -------------->
+<!--- end of MOI Ajout centrage des buttons ! --->
 
 
 
+<!--------------------------------- BACK to TOP Button --------------------------------->
+<a class="top-link hide" href="" id="js-top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6"><path d="M12 6H0l6-6z"/></svg>
+</a>
+
+<style>
+.top-link {
+    transition: all .25s ease-in-out;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-flex;
+    
+   cursor: pointer;
+   align-items: center;
+   justify-content: center;
+   margin: 0 1em .2em 0;
+   border-radius: 50%;
+   padding: .25em;
+   width: 40px;
+   height: 40px;
+   background-color: #F8F8F8;
+}
+</style>
+<!--- End of BACK to TOP Button --->
 
 
-<!---------------  HEADER  ----------------->
-<header>
 
-<!-- LOGO & CONTACT Badge -->
+
+</head> <!-------------  End of Head  -------------->
+
+
+
+
+
+
+<header> <!---------------  HEADER  ----------------->
+
+
+
+
+<!----------------------------- LOGO & MENU ----------------------------------->
     <header class="header-global">
+
     <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
             <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
                 <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
                 <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
-            </a>
+            </a> <!---  end of Logo --->
             
+            <!--- MENU --->
+            <div class="navbar-collapse collapse" id="navbar_global">
+
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="./index.html" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
+                                <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
+                            </a>
+                        </div>
+
+                        <div class="col-6 collapse-close">
+                            <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-toggle="dropdown" >
+                            <span class="nav-link-inner-text">> > ></span>
+                            <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="./borders.html">Borders</a></li>
+                            <li><a class="dropdown-item" href="./rough.html">Rough</a></li>
+                            <li><a class="dropdown-item" href="./bases.html">Bases</a></li>
+                            <li><a class="dropdown-item" href="./gods.html">Gods</a></li>
+                            <li><a class="dropdown-item" href="./eyes.html">Eyes</a></li>
+                            <li><a class="dropdown-item" href="./#section1">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!--- Hamburger --->
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
         </div>
-</nav>
-<!-------------  end of Logo ------------->
+</nav> <!--- End of Logo & Menu --->
+
 
 
 
@@ -128,22 +208,6 @@ M O N
 
 
 
-<!----------------- HERO Section --------------------->
-<!--- ACTION CARD --->
-<div class="col-12">
-    <div class="card bg-primary shadow-inset border-light px-5 py-3 text-center mb-5">
-        <hr>
-        <h1 class="h1 mb-3">J O V A N I</h1>
-         <h3 class="mb-5 lead">J E A N - P H I L I P P E</h3>
-    </div>
-        
-</div>
-
-</section>
-
-<!--- End of Action Card --->
-<!-----------  End of Hero Section ------------->
-
 
 
 
@@ -154,6 +218,21 @@ M O N
 
 
 
+
+<!----------------- HERO Section --------------------->
+<div class="row justify-content-center">
+<!--- ACTION CARD --->
+<div class="col-12">
+    <div class="card bg-primary shadow-inset border-light px-5 py-3 text-center mb-5">
+        <hr>
+        <hr>
+        <h1 class="h1 mb-3">J O V A N I</h1>
+         <h3 class="mb-5 lead">J E A N - P H I L I P P E</h3>
+    </div>
+        
+</div>
+</div> <!--- End of Action Card --->
+<!-----------  End of Hero Section ------------->
 
 
 
@@ -401,7 +480,7 @@ le relief du site. Donc pas sur ce theme-->
                         <h1 class="h1 mb-3">J O V A N I</h1>
                         <h4 class="mb-4 lead">J E A N - P H I L I P P E</h4>
 
-                        <img src="./images/moi_mosaicist.png" class="card-img-top rounded" alt="">
+                        <img src="./images/moi_mosaicist_2.png" class="card-img-top rounded" alt="">
                     </div>
 
                     <div class="card-body pt-2">
@@ -585,9 +664,9 @@ le relief du site. Donc pas sur ce theme-->
   
 
 <!--- Core --->
-<script src="./vendor/jquery/dist/jquery.min.js"></script>
-<script src="./vendor/popper.js/dist/umd/popper.min.js"></script>
-<script src="./vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="./vendor/headroom.js/dist/headroom.min.js"></script>
 
 <!--- Vendor JS --->
