@@ -115,12 +115,12 @@ M O N
    margin: 0 1em .2em 0;
    border-radius: 50%;
    padding: .25em;
-   width: 30px;
+   width: 40px;
    height: 40px;
    background-color: #F8F8F8;
 }
 </style>
-<!------------------------- End of BACK to TOP Button --------------------------->
+<!--- End of BACK to TOP Button --->
 
 
 
@@ -137,18 +137,68 @@ M O N
 
 
 
-<!-- LOGO & CONTACT Badge -->
+<!----------------------------- LOGO & MENU ----------------------------------->
     <header class="header-global">
+
     <nav id="navbar-main" aria-label="Primary navigation" class="navbar navbar-main navbar-expand-lg navbar-theme-primary headroom navbar-light navbar-transparent navbar-theme-primary">
         <div class="container position-relative">
             <a class="navbar-brand shadow-soft py-2 px-3 rounded border border-light mr-lg-4" href="./index.html">
                 <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
                 <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
-            </a>
+            </a> <!---  end of Logo --->
             
+            <!--- MENU --->
+            <div class="navbar-collapse collapse" id="navbar_global">
+
+
+
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand">
+                            <a href="./index.html" class="navbar-brand shadow-soft py-2 px-3 rounded border border-light">
+                                <img class="navbar-brand-dark" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
+                                <img class="navbar-brand-light" src="./assets/img/brand/jpj-mauve.svg" alt="Logo mauve">
+
+                            </a>
+                        </div>
+                        <div class="col-6 collapse-close">
+                            <a href="#navbar_global" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" title="close" aria-label="Toggle navigation"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" data-toggle="dropdown" >
+                            <span class="nav-link-inner-text">Pages</span>
+                            <span class="fas fa-angle-down nav-link-arrow ml-2"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./html/pages/about.html">About</a></li>
+                            <li><a class="dropdown-item" href="./html/pages/pricing.html">Pricing</a></li>
+                            <li><a class="dropdown-item" href="./html/pages/contact.html">Contact</a></li>
+                            <li><a class="dropdown-item" href="./html/pages/sign-in.html">Sign in</a></li>
+                            <li><a class="dropdown-item" href="./html/pages/sign-up.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!--- Hamburger --->
+            <div class="d-flex align-items-center">
+                <button class="navbar-toggler ml-2" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
         </div>
-</nav>
-<!-------------  end of Logo ------------->
+</nav> <!--- End of Logo & Menu --->
+
 
 
 
@@ -319,15 +369,6 @@ le relief du site. Donc pas sur ce theme-->
 
 
 
-<!----------------------------------- ALERT --------------------------------------------->
-<div class="card-body text-center text-md-center">
-    <div class="col-12 col-md-20">
-        <div class="alert alert-dark shadow-inset" role="alert">
-            <span class="alert-inner--text">Mosaics Exterior Resistance / Epoxy-Fiberglass</span>
-        </div>
-        
-    </div>
-</div> <!--- End of Alert --->
 
 
 
