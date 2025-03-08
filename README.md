@@ -1,1 +1,2 @@
-@ JELP.ART - Jean-Philippe JOVANI - Creations - Marble Mosaics + Mixed Medias
+@ JELP.ART - Marble Mosaics + Mixed Medias - Creations
+https://jpjovani.github.io/1/index.html
